@@ -1,0 +1,9 @@
+<h1>New Song Form</h1><br><br>
+<%=form_for @song do |f| %>
+
+Song Name:<%= f.text_field :name %><br><br>
+Song Artist Name:<%= f.text_field :artist_id %><br><br>
+Song Genre Name:<%= f.text_field :genre_id %><br><br>
+<%= f.submit "Create Song" %><br><br>
+<% end %>
+<%= button_to "Cancel", songs_path, method: "get" %>
