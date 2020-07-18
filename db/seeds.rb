@@ -1,7 +1,36 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Artist.delete_all
+Genre.delete_all
+Song.delete_all
+
+a1 = Artist.create(name: Faker::Name.unique.name, bio: Faker::Quote.unique.yoda)
+a2 = Artist.create(name: Faker::Name.unique.name, bio: Faker::Quote.unique.yoda)
+a3 = Artist.create(name: Faker::Name.unique.name, bio: Faker::Quote.unique.yoda)
+a4 = Artist.create(name: Faker::Name.unique.name, bio: Faker::Quote.unique.yoda)
+a5 = Artist.create(name: Faker::Name.unique.name, bio: Faker::Quote.unique.yoda)
+a6 = Artist.create(name: Faker::Name.unique.name, bio: Faker::Quote.unique.yoda)
+a7 = Artist.create(name: Faker::Name.unique.name, bio: Faker::Quote.unique.yoda)
+a8 = Artist.create(name: Faker::Name.unique.name, bio: Faker::Quote.unique.yoda)
+a9 = Artist.create(name: Faker::Name.unique.name, bio: Faker::Quote.unique.yoda)
+a10  = Artist.create(name: Faker::Name.unique.name, bio: Faker::Quote.unique.yoda)
+
+g1 = Genre.create(name: Faker::Music.genre)
+g2 = Genre.create(name: Faker::Music.genre)
+g3 = Genre.create(name: Faker::Music.genre)
+g4 = Genre.create(name: Faker::Music.genre)
+g5 = Genre.create(name: Faker::Music.genre)
+g6 = Genre.create(name: Faker::Music.genre)
+g7 = Genre.create(name: Faker::Music.genre)
+g8 = Genre.create(name: Faker::Music.genre)
+g9 = Genre.create(name: Faker::Music.genre)
+g10 = Genre.create(name: Faker::Music.genre)
+
+Song.create(name: Faker::Music.album, artist: a1, genre: g1)
+Song.create(name: Faker::Music.album, artist: a2, genre: g2)
+Song.create(name: Faker::Music.album, artist: a3, genre: g3)
+Song.create(name: Faker::Music.album, artist: a4, genre: g4)
+Song.create(name: Faker::Music.album, artist: a5, genre: g5)
+Song.create(name: Faker::Music.album, artist: a6, genre: g6)
+Song.create(name: Faker::Music.album, artist: a7, genre: g7)
+Song.create(name: Faker::Music.album, artist: a8, genre: g8)
+Song.create(name: Faker::Music.album, artist: a9, genre: g9)
+Song.create(name: Faker::Music.album, artist: a10, genre: g10)

@@ -1,0 +1,5 @@
+<h1>Artist Page</h1><br>
+<h1><b><%= @artist.name %></h1></b><br><br>
+<p><%= @artist.bio %></p><br><br><br>
+<%= button_to "Edit Artist", edit_artist_path(@artist), method: "get" %><br><br>
+<%= button_to "Artist Index", artists_path, method: "get" %>

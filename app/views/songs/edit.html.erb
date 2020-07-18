@@ -1,0 +1,11 @@
+<h1>Edit Song</h1><br><br>
+<%= form_for @song do |f| %>
+
+Edit Song Name:
+<%= f.text_field :name, placeholder: "#{@song.name}" %><br><br>
+Edit Artist Name:
+<%= f.number_field :artist_id, placeholder: "#{@song.artist.name}" %><br><br>
+Edit Genre:
+<%= f.number_field :genre_id, placeholder: "#{@song.genre.name}" %><br><br>
+<%= f.submit "Update Song" %>
+<% end %>
