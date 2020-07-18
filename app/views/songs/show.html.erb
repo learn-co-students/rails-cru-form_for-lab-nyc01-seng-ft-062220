@@ -1,0 +1,6 @@
+#note: referenced solution for these views because I wasn't sure how to take input of an artist_id and genre_id)
+
+<h1><%= @song.name %></h1>
+
+<h1><%= (link_to @song.artist.name, artist_path(@song.artist)) if @song.artist %></h1> 
+<h1><%= (link_to @song.genre.name, genre_path(@song.genre)) if @song.genre %></h1>
