@@ -1,0 +1,13 @@
+Artist Show Page
+<h1><%=@artist.name%></h1>
+<p><%=@artist.bio%></p>
+<%@artist.genres.each do |genre|%>
+    <%if genre == @artist.genres.last%>
+        <%=genre.name%>
+    <%else%>
+        <%=genre.name + " | "%>
+    <%end%>
+<%end%>
+<%@artist.songs.each do |song|%>
+    <%=song.name%><br>
+<%end%>
