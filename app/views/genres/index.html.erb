@@ -1,0 +1,5 @@
+Index
+<br>
+<%@Genres.each do |genre|%>
+    <div><%=link_to genre.name, genre_path(genre)%></div>
+<%end%>
